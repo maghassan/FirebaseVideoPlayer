@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:id="@+id/video_player"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/video_player"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/play_btn"
+            android:src="@drawable/ic_play"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"/>
+
+        <ProgressBar
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:id="@+id/video_progress"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/video_duration"
+            android:text="0:00"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/buffer_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/video_player"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="104dp"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
